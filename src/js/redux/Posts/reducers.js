@@ -9,10 +9,10 @@ const initialState = [...localStorage.getStorage()];
 export const postsReducer = ( state = initialState, action ) => {
   switch ( action.type ) {
     case ADD_POST:
-      const {hash, value} = action.payload;
+      const {hash, value} = action.post;
       return [...state, {hash, value}];
     case DELETE_POST:
-      const newPosts = state.filter( post => post.hash !== action.payload );
+      const newPosts = state.filter( post => post.hash !== action.hash );
       return [...newPosts];
     default:
       return state;

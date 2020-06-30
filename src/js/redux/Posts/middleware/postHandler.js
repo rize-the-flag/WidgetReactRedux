@@ -6,12 +6,12 @@ const storage = new LocalStorage( LOCAL_STORAGE_KEY );
 
 export const mwPostsHandler = ( store ) => ( next ) => ( action ) => {
   if (action.type === ADD_POST) {
-    const {hash, value} = action.payload;
+    const {hash, value} = action.post;
     storage.addRecord( hash, value );
   }
 
   if (action.type === DELETE_POST) {
-    storage.removeRecord( action.payload );
+    storage.removeRecord( action.hash );
   }
 
   return next( action );

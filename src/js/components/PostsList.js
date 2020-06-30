@@ -1,7 +1,7 @@
 import React from 'react';
 import Post from './Post';
 
-const PostsList = ( {posts, postsCount, deletePost} ) => {
+const PostsList = ( {posts, deletePost} ) => {
   const postsList = posts.map( ( post ) => {
     const {hash, value: {userName, commentBody, dateTime}} = post;
     return (
