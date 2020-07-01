@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PostsList from '../components/PostsList';
 import { deletePost } from '../redux/Posts/actions';
-import { selectPosts } from '../redux/Posts/selectors';
+import { getPosts } from '../redux/Posts/selectors';
 
 
 const PostsListContainer = ( {posts, postsCount, deletePost} ) => {
@@ -22,7 +22,7 @@ const mapDispatchToProps = ( dispatch ) => {
 };
 
 const mapStateToProps = ( state ) => ( {
-  posts: selectPosts( state ),
+  posts: getPosts( state ),
 } );
 
 export default connect( mapStateToProps, mapDispatchToProps )( PostsListContainer );
