@@ -17,9 +17,9 @@ const PostsList = ( {posts, deletePost} ) => {
     );
   } );
   return (
-      <ul className = "comments-list">
-        {postsList}
-      </ul>
+    <ul className = "comments-list">
+      {postsList}
+    </ul>
   );
 };
 

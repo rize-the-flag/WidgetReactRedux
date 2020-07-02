@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PostsList from '../components/PostsList';
-import { deletePost } from '../redux/Posts/actions';
-import { getPosts } from '../redux/Posts/selectors';
+import { deletePost } from '../redux/actions';
+import { getPosts } from '../redux/selectors';
 
 
 const PostsListContainer = ( {posts, postsCount, deletePost} ) => {

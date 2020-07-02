@@ -1,4 +1,4 @@
-export default class LocalStorage {
+class BrowserStorage {
   constructor( storageKey = '' ) {
     this._storage = [];
     this._storageKey = storageKey;
@@ -34,3 +34,5 @@ export default class LocalStorage {
     localStorage.setItem( this._storageKey, JSON.stringify( this._storage ) );
   }
 }
+
+export default BrowserStorage;

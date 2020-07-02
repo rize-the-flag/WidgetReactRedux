@@ -2,10 +2,14 @@ import React from 'react';
 import shortid from 'shortid';
 import { useState } from 'react';
 
-const makePost = ( hash, value ) => {
+const makePost = ( hash, {userName, commentBody, dateTime = new Date().toLocaleString()} ) => {
   return {
     hash,
-    value
+    value: {
+      userName,
+      commentBody,
+      dateTime
+    },
   };
 };
 
