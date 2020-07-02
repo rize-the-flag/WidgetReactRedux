@@ -20,7 +20,16 @@ const Form = ( {addPost} ) => {
 
   const handleSubmit = ( ev ) => {
     ev.preventDefault();
-    addPost( makePost( shortid.generate(), {userName, commentBody} ) );
+    addPost(
+      makePost( shortid.generate(),
+                {
+                  userName,
+                  commentBody,
+                  dateTime: new Date().toLocaleString()
+                }
+      )
+    );
+
     setUserName( '' );
     setCommentBody( '' );
   };
